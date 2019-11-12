@@ -81,6 +81,7 @@ angular.module('cloudberry.mapresultcache', ['cloudberry.common'])
                 store.set(prefix[geoLevel] + mapResult[i][geoLevel], mapResult[i]);
                 geoIdSet.delete(mapResult[i][geoLevel]);
             }
+            console.log(store);
             // Mark other results as checked: these are geoIds with no results
             geoIdSet.forEach(function (value) {
                 store.set(prefix[geoLevel] + value, INVALID_VALUE);
